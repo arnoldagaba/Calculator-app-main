@@ -1,8 +1,8 @@
 // Variables to store the input values and operator
-let currentInput = ''; // The number being typed in
-let previousInput = ''; // The number before the operator
-let operator = ''; // The chosen operator
-let result = null; // Stores the result
+let currentInput = '';
+let previousInput = '';
+let operator = '';
+let result = null;
 
 // Get the display element
 const display = document.querySelector('.output');
@@ -82,7 +82,7 @@ function resetClaculator() {
     updateDisplay('');
 }
 
-/* // Event listener for theme switch (optional feature for theme toggle)
+/* // Event listener for theme switch 
 const themeSlider = document.getElementById('theme-slider');
 themeSlider.addEventListener('input', () => {
     document.body.className = `theme-${themeSlider.value}`;
