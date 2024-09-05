@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Calculator app</title>
 
 </head>
-<body>
+
+<body class="theme-1">
+  <div class="calculator">
+    <div class="header">
+      <span>calc</span>
+
+      <div class="theme-toggle">
+        <label for="theme-slider" class="slider-label">THEME</label>
+        <input type="range" min="1" max="3" value="1" id="theme-slider">
+      </div>
+    </div>
+
+    <div class="display">
+      <input class="output" readonly>
+    </div>
+
+    <div class="btn-container">
+      <div class="buttons">
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn del">DEL</button>
+
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn operator">+</button>
+
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn operator">-</button>
+
+        <button class="btn">.</button>
+        <button class="btn">0</button>
+        <button class="btn operator">/</button>
+        <button class="btn operator">x</button>
+
+        <button class="btn reset">RESET</button>
+        <button class="btn equal">=</button>
+      </div>
+    </div>
+  </div>
 
 
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Arnold Agaba</a>.
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
