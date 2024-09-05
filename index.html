@@ -19,9 +19,15 @@
     <div class="header">
       <span>calc</span>
 
-      <div class="theme-toggle">
-        <label for="theme-slider" class="slider-label">THEME</label>
-        <input type="range" min="1" max="3" value="1" id="theme-slider">
+      <div class="theme">
+        <div class="theme-indicator">1</div>
+        <div class="theme-indicator">2</div>
+        <div class="theme-indicator">3</div>
+
+        <div class="theme-toggle">
+          <label for="theme-slider" class="slider-label">THEME</label>
+          <input type="range" min="1" max="3" value="1" id="theme-slider">
+        </div>
       </div>
     </div>
 
@@ -31,28 +37,28 @@
 
     <div class="btn-container">
       <div class="buttons">
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
-        <button class="btn del">DEL</button>
+        <button class="btn" onclick="appendNumber(7)">7</button>
+        <button class="btn" onclick="appendNumber(8)">8</button>
+        <button class="btn" onclick="appendNumber(9)">9</button>
+        <button class="btn del" onclick="deleteLast()">DEL</button>
 
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn operator">+</button>
+        <button class="btn" onclick="appendNumber(4)">4</button>
+        <button class="btn" onclick="appendNumber(5)">5</button>
+        <button class="btn" onclick="appendNumber(6)">6</button>
+        <button class="btn operator" onclick="chooseOperator('+')">+</button>
 
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
-        <button class="btn operator">-</button>
+        <button class="btn" onclick="appendNumber(1)">1</button>
+        <button class="btn" onclick="appendNumber(2)">2</button>
+        <button class="btn" onclick="appendNumber(3)">3</button>
+        <button class="btn operator" onclick="chooseOperator('-')">-</button>
 
-        <button class="btn">.</button>
-        <button class="btn">0</button>
-        <button class="btn operator">/</button>
-        <button class="btn operator">x</button>
+        <button class="btn" onclick="appendNumber('.')">.</button>
+        <button class="btn" onclick="appendNumber(0)">0</button>
+        <button class="btn operator" onclick="chooseOperator('/')">/</button>
+        <button class="btn operator" onclick="chooseOperator('*')">x</button>
 
-        <button class="btn reset">RESET</button>
-        <button class="btn equal">=</button>
+        <button class="btn reset" onclick="resetClaculator()">RESET</button>
+        <button class="btn equal" onclick="computeResult()"> = </button>
       </div>
     </div>
   </div>

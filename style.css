@@ -95,8 +95,40 @@ body {
 
 .header span {
     color: var(--textColorAlt);
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Style for numbers indicating theme positions */
+.theme-indicator {
+    font-size: 0.75rem;
+    color: var(--textColorAlt);
+    position: absolute;
+}
+
+.theme-indicator:nth-child(1) {
+    left: 3.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
+}
+
+.theme-indicator:nth-child(2) {
+    left: 4.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
+}
+
+.theme-indicator:nth-child(3) {
+    left: 5.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
 }
 
 .theme-toggle {
@@ -108,7 +140,7 @@ body {
 }
 
 #theme-slider {
-    width: 2.5rem;
+    width: 3rem;
     height: 1rem;
     -webkit-appearance: none;
     appearance: none;
@@ -116,6 +148,7 @@ body {
     background: var(--toggleBg);
     cursor: pointer;
     border-radius: 0.625rem;
+    transition: all 0.3s ease;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -139,7 +172,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .slider-label {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     color: var(--textColorAlt);
 }
 
@@ -155,6 +188,7 @@ input[type="range"]::-moz-range-thumb {
     border: none;
     border-radius: 0.625rem;
     margin-bottom: 1rem;
+    text-align: right;
 }
 
 .output {
@@ -165,7 +199,6 @@ input[type="range"]::-moz-range-thumb {
     background: var(--toggleBg);
     padding: 2rem;
     border-radius: 0.625rem;
-    overflow: hidden;
 }
 
 .buttons {
@@ -189,7 +222,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .btn:active {
-    background-color: ;
+    background-color: var(--keyBgAlt);
+    box-shadow: 0 0.25rem var(--keyShadowAlt);
+    transform: translateY(0.25rem);
 }
 
 .equal {
@@ -200,7 +235,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .equal:active {
-    background-color: ;
+    background-color: var(--keyBgToggle);
+    box-shadow: 0 0.25rem var(--keyShadowToggle);
+    transform: translateY(0.25rem);
 }
 
 .reset {
@@ -211,7 +248,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .reset:active {
-    background-color: ;
+    background-color: var(--keyBg);
+    box-shadow: 0 0.25rem var(--keyShadow);
+    transform: translateY(0.25rem);
 }
 
 .del {
@@ -221,7 +260,14 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .del:active {
-    background-color: ;
+    background-color: var(--keyBg);
+    box-shadow: 0 0.25rem var(--keyShadow);
+    transform: translateY(0.25rem);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 370px) {
+    
 }
 
 
