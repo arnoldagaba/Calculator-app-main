@@ -6,63 +6,96 @@
 :root {
     /* THEME ONE */
     /* Backgrounds */
-    --bgMain: hsl(222, 26%, 31%); /*  Very dark desaturated blue (main background) */
-    --toggleBg: hsl(223, 31%, 20%); /* Very dark desaturated blue (toggle background, keypad background) */ 
-    --screenBg: hsl(224, 36%, 15%); /* Very dark desaturated blue (screen background) */
+    --bgMain: hsl(222, 26%, 31%);
+    /*  Very dark desaturated blue (main background) */
+    --toggleBg: hsl(223, 31%, 20%);
+    /* Very dark desaturated blue (toggle background, keypad background) */
+    --screenBg: hsl(224, 36%, 15%);
+    /* Very dark desaturated blue (screen background) */
 
     /* Keys */
-    --keyBg: hsl(225, 21%, 49%); /* Desaturated dark blue (key background) */
-    --keyShadow: hsl(224, 28%, 35%); /* Desaturated dark blue (key shadow)  */
+    --keyBg: hsl(225, 21%, 49%);
+    /* Desaturated dark blue (key background) */
+    --keyShadow: hsl(224, 28%, 35%);
+    /* Desaturated dark blue (key shadow)  */
 
-    --keyBgToggle: hsl(6, 63%, 50%); /* Red (key background, toggle) */ 
-    --keyShadowToggle: hsl(6, 70%, 34%); /*  Dark red (key shadow) */
+    --keyBgToggle: hsl(6, 63%, 50%);
+    /* Red (key background, toggle) */
+    --keyShadowToggle: hsl(6, 70%, 34%);
+    /*  Dark red (key shadow) */
 
-    --keyBgAlt: hsl(30, 25%, 89%); /* Light grayish orange (key background) */
-    --keyShadowAlt: hsl(28, 16%, 65%); /* Grayish orange (key shadow) */
+    --keyBgAlt: hsl(30, 25%, 89%);
+    /* Light grayish orange (key background) */
+    --keyShadowAlt: hsl(28, 16%, 65%);
+    /* Grayish orange (key shadow) */
 
     /* Text */
-    --textColor: hsl(221, 14%, 31%); /* Very dark grayish blue */
-    --textColorAlt: hsl(0, 0%, 100%);  /* White */
+    --textColor: hsl(221, 14%, 31%);
+    /* Very dark grayish blue */
+    --textColorAlt: hsl(0, 0%, 100%);
+    /* White */
 
     /* THEME TWO */
     /* Backgrounds */
-    --mainBg2: hsl(0, 0%, 90%); /* Light gray (main background) */ 
-    --toggleBg2: hsl(0, 5%, 81%); /* Grayish red (toggle background, keypad background) */
-    --screenBg2: hsl(0, 0%, 93%); /* Very light gray (screen background) */
+    --mainBg2: hsl(0, 0%, 90%);
+    /* Light gray (main background) */
+    --toggleBg2: hsl(0, 5%, 81%);
+    /* Grayish red (toggle background, keypad background) */
+    --screenBg2: hsl(0, 0%, 93%);
+    /* Very light gray (screen background) */
 
     /* Keys */
-    --keyBg2: hsl(185, 42%, 37%); /* Dark moderate cyan (key background) */
-    --keyShadow2: hsl(185, 58%, 25%); /* Very dark cyan (key shadow) */
+    --keyBg2: hsl(185, 42%, 37%);
+    /* Dark moderate cyan (key background) */
+    --keyShadow2: hsl(185, 58%, 25%);
+    /* Very dark cyan (key shadow) */
 
-    --keyBgToggle2: hsl(25, 98%, 40%); /* Orange (key background, toggle) */ 
-    --keyShadowToggle2: hsl(25, 99%, 27%); /* Dark orange (key shadow) */
+    --keyBgToggle2: hsl(25, 98%, 40%);
+    /* Orange (key background, toggle) */
+    --keyShadowToggle2: hsl(25, 99%, 27%);
+    /* Dark orange (key shadow) */
 
-    --keyBgAlt2: hsl(45, 7%, 89%); /* Light grayish yellow (key background) */
-    --keyShadowAlt2: hsl(35, 11%, 61%); /* Dark grayish orange (key shadow) */
+    --keyBgAlt2: hsl(45, 7%, 89%);
+    /* Light grayish yellow (key background) */
+    --keyShadowAlt2: hsl(35, 11%, 61%);
+    /* Dark grayish orange (key shadow) */
 
     /* Text */
-    --textColor2: hsl(60, 10%, 19%); /* Very dark grayish yellow */
-    --textColorAlt: hsl(0, 0%, 100%); /* White (text) */
+    --textColor2: hsl(60, 10%, 19%);
+    /* Very dark grayish yellow */
+    --textColorAlt2: hsl(0, 0%, 100%);
+    /* White (text) */
 
     /* THEME THREE */
     /* Backgrounds */
-    --mainBg3: hsl(268, 75%, 9%); /* Very dark violet (main background) */
-    --toggleBg3: hsl(268, 71%, 12%); /* Very dark violet (toggle background, keypad background, screen background) */
+    --mainBg3: hsl(268, 75%, 9%);
+    /* Very dark violet (main background) */
+    --toggleBg3: hsl(268, 71%, 12%);
+    /* Very dark violet (toggle background, keypad background, screen background) */
 
     /* Keys */
-    --keyBg3: hsl(281, 89%, 26%); /* Dark violet (key background)  */
-    --keyShadow3: hsl(285, 91%, 52%); /* Vivid magenta (key shadow)  */
+    --keyBg3: hsl(281, 89%, 26%);
+    /* Dark violet (key background)  */
+    --keyShadow3: hsl(285, 91%, 52%);
+    /* Vivid magenta (key shadow)  */
 
-    --keyBgToggle3: hsl(176, 100%, 44%); /* Pure cyan (key background, toggle) */
-    --keyShadowToggle3: hsl(177, 92%, 70%); /*  Soft cyan (key shadow) */ 
+    --keyBgToggle3: hsl(176, 100%, 44%);
+    /* Pure cyan (key background, toggle) */
+    --keyShadowToggle3: hsl(177, 92%, 70%);
+    /*  Soft cyan (key shadow) */
 
-    --keyBgAlt3: hsl(268, 47%, 21%); /* Very dark violet (key background) */
-    --keyShadowAlt3: hsl(290, 70%, 36%); /* Dark magenta (key shadow) */ 
+    --keyBgAlt3: hsl(268, 47%, 21%);
+    /* Very dark violet (key background) */
+    --keyShadowAlt3: hsl(290, 70%, 36%);
+    /* Dark magenta (key shadow) */
 
     /* Text */
-    --textColor3: hsl(52, 100%, 62%); /* Light yellow */
-    --textColorAlt3: hsl(198, 20%, 13%); /* Very dark blue */
-    --textColorVariant: hsl(0, 0%, 100%); /* White (text)  */
+    --textColor3: hsl(52, 100%, 62%);
+    /* Light yellow */
+    --textColorAlt3: hsl(198, 20%, 13%);
+    /* Very dark blue */
+    --textColorVariant: hsl(0, 0%, 100%);
+    /* White (text)  */
 }
 
 * {
@@ -72,7 +105,7 @@
     font-family: 'League Spartan', system-ui;
 }
 
-body {
+body.theme-1 {
     background-color: var(--bgMain);
     display: flex;
     flex-direction: column;
@@ -166,7 +199,8 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-moz-range-thumb {
     width: 0.625rem;
     height: 0.625rem;
-    background-color: var(--keyBgToggle); /* Change this for Firefox */
+    background-color: var(--keyBgToggle);
+    /* Change this for Firefox */
     border-radius: 50%;
     cursor: pointer;
 }
@@ -265,10 +299,198 @@ input[type="range"]::-moz-range-thumb {
     transform: translateY(0.25rem);
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 370px) {
-    
+
+
+
+/* INITIAL THEME PREFERENCE */
+@media (prefers-color-scheme: theme-2) {
+    body.theme-2 {
+        background-color: var(--mainBg2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header span {
+        color: var(--textColorAlt2);
+    }
+
+    /* Style for numbers indicating theme positions */
+    .theme-indicator {
+        color: var(--textColorAlt2);
+    }
+
+    #theme-slider {
+        background: var(--toggleBg2);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* Working on the thumb in the slider */
+        background-color: var(--keyBgToggle2);
+        box-shadow: 0 0.1rem var(--keyShadowToggle2);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        background-color: var(--keyBgToggle2);
+    }
+
+    .slider-label {
+        color: var(--textColorAlt2);
+    }
+
+    .display .output {
+        background-color: var(--screenBg2);
+        color: var(--textColorAlt2);
+    }
+
+    .btn-container {
+        background: var(--toggleBg2);
+    }
+
+    .btn {
+        background-color: var(--keyBgAlt2);
+        color: var(--textColor2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt2);
+    }
+
+    .btn:active {
+        background-color: var(--keyBgAlt2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt2);
+    }
+
+    .equal {
+        background-color: var(--keyBgToggle2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadowToggle2);
+    }
+
+    .equal:active {
+        background-color: var(--keyBgToggle2);
+        box-shadow: 0 0.25rem var(--keyShadowToggle2);
+    }
+
+    .reset {
+        background-color: var(--keyBg2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .reset:active {
+        background-color: var(--keyBg2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .del {
+        background-color: var(--keyBg2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .del:active {
+        background-color: var(--keyBg2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
 }
+
+
+
+
+@media (prefers-color-scheme: theme-3) {
+    body.theme-3 {
+        background-color: var(--mainBg3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header span {
+        color: var(--textColorAlt3);
+    }
+
+    /* Style for numbers indicating theme positions */
+    .theme-indicator {
+        color: var(--textColorAlt3);
+    }
+
+    #theme-slider {
+        background: var(--toggleBg3);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* Working on the thumb in the slider */
+        background-color: var(--keyBgToggle3);
+        box-shadow: 0 0.1rem var(--keyShadowToggle3);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        background-color: var(--keyBgToggle3);
+    }
+
+    .slider-label {
+        color: var(--textColorAlt3);
+    }
+
+    .display .output {
+        background-color: var(--screenBg3);
+        color: var(--textColorAlt3);
+    }
+
+    .btn-container {
+        background: var(--toggleBg3);
+    }
+
+    .btn {
+        background-color: var(--keyBgAlt3);
+        color: var(--textColor2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt3);
+    }
+
+    .btn:active {
+        background-color: var(--keyBgAlt3);
+        box-shadow: 0 0.25rem var(--keyShadowAlt3);
+    }
+
+    .equal {
+        background-color: var(--keyBgToggle3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadowToggle3);
+    }
+
+    .equal:active {
+        background-color: var(--keyBgToggle3);
+        box-shadow: 0 0.25rem var(--keyShadowToggle3);
+    }
+
+    .reset {
+        background-color: var(--keyBg3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .reset:active {
+        background-color: var(--keyBg3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .del {
+        background-color: var(--keyBg3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .del:active {
+        background-color: var(--keyBg3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 370px) {}
 
 
 
@@ -277,11 +499,11 @@ input[type="range"]::-moz-range-thumb {
 
 
 .attribution {
-	font-size: 11px;
-	text-align: center;
+    font-size: 11px;
+    text-align: center;
     bottom: 0;
 }
 
 .attribution a {
-	color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 }

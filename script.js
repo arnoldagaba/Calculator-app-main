@@ -27,10 +27,13 @@ function appendNumber(number) {
 
 // Function to choose the operator
 function chooseOperator(op) {
-    if (currentInput === '') return; // Don't allow operator selection without a number
+    if (currentInput === '') 
+        return; // Don't allow operator selection without a number
+
     if (previousInput !== '') {
         computeResult(); // If there's already an input, compute the result before changing the operator
     }
+
     operator = op;
     previousInput = currentInput; // Store the first operand
     currentInput = ''; // Reset for the second operand
@@ -39,7 +42,8 @@ function chooseOperator(op) {
 
 // Function to compute the result
 function computeResult() {
-    if (previousInput === '' || currentInput === '') return; // Avoid calculating without full input
+    if (previousInput === '' || currentInput === '') 
+        return; // Avoid calculating without full input
 
     const firstOperand = parseFloat(previousInput);
     const secondOperand = parseFloat(currentInput);
@@ -82,8 +86,9 @@ function resetClaculator() {
     updateDisplay('');
 }
 
-/* // Event listener for theme switch 
+// Event listener for theme switch 
 const themeSlider = document.getElementById('theme-slider');
+
 themeSlider.addEventListener('input', () => {
     document.body.className = `theme-${themeSlider.value}`;
-}); */
+});
