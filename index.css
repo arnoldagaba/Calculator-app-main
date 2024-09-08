@@ -1,0 +1,509 @@
+@font-face {
+    font-family: 'League Spartan';
+    src: url("font/League_Spartan/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+    /* THEME ONE */
+    /* Backgrounds */
+    --bgMain: hsl(222, 26%, 31%);
+    /*  Very dark desaturated blue (main background) */
+    --toggleBg: hsl(223, 31%, 20%);
+    /* Very dark desaturated blue (toggle background, keypad background) */
+    --screenBg: hsl(224, 36%, 15%);
+    /* Very dark desaturated blue (screen background) */
+
+    /* Keys */
+    --keyBg: hsl(225, 21%, 49%);
+    /* Desaturated dark blue (key background) */
+    --keyShadow: hsl(224, 28%, 35%);
+    /* Desaturated dark blue (key shadow)  */
+
+    --keyBgToggle: hsl(6, 63%, 50%);
+    /* Red (key background, toggle) */
+    --keyShadowToggle: hsl(6, 70%, 34%);
+    /*  Dark red (key shadow) */
+
+    --keyBgAlt: hsl(30, 25%, 89%);
+    /* Light grayish orange (key background) */
+    --keyShadowAlt: hsl(28, 16%, 65%);
+    /* Grayish orange (key shadow) */
+
+    /* Text */
+    --textColor: hsl(221, 14%, 31%);
+    /* Very dark grayish blue */
+    --textColorAlt: hsl(0, 0%, 100%);
+    /* White */
+
+    /* THEME TWO */
+    /* Backgrounds */
+    --mainBg2: hsl(0, 0%, 90%);
+    /* Light gray (main background) */
+    --toggleBg2: hsl(0, 5%, 81%);
+    /* Grayish red (toggle background, keypad background) */
+    --screenBg2: hsl(0, 0%, 93%);
+    /* Very light gray (screen background) */
+
+    /* Keys */
+    --keyBg2: hsl(185, 42%, 37%);
+    /* Dark moderate cyan (key background) */
+    --keyShadow2: hsl(185, 58%, 25%);
+    /* Very dark cyan (key shadow) */
+
+    --keyBgToggle2: hsl(25, 98%, 40%);
+    /* Orange (key background, toggle) */
+    --keyShadowToggle2: hsl(25, 99%, 27%);
+    /* Dark orange (key shadow) */
+
+    --keyBgAlt2: hsl(45, 7%, 89%);
+    /* Light grayish yellow (key background) */
+    --keyShadowAlt2: hsl(35, 11%, 61%);
+    /* Dark grayish orange (key shadow) */
+
+    /* Text */
+    --textColor2: hsl(60, 10%, 19%);
+    /* Very dark grayish yellow */
+    --textColorAlt2: hsl(0, 0%, 100%);
+    /* White (text) */
+
+    /* THEME THREE */
+    /* Backgrounds */
+    --mainBg3: hsl(268, 75%, 9%);
+    /* Very dark violet (main background) */
+    --toggleBg3: hsl(268, 71%, 12%);
+    /* Very dark violet (toggle background, keypad background, screen background) */
+
+    /* Keys */
+    --keyBg3: hsl(281, 89%, 26%);
+    /* Dark violet (key background)  */
+    --keyShadow3: hsl(285, 91%, 52%);
+    /* Vivid magenta (key shadow)  */
+
+    --keyBgToggle3: hsl(176, 100%, 44%);
+    /* Pure cyan (key background, toggle) */
+    --keyShadowToggle3: hsl(177, 92%, 70%);
+    /*  Soft cyan (key shadow) */
+
+    --keyBgAlt3: hsl(268, 47%, 21%);
+    /* Very dark violet (key background) */
+    --keyShadowAlt3: hsl(290, 70%, 36%);
+    /* Dark magenta (key shadow) */
+
+    /* Text */
+    --textColor3: hsl(52, 100%, 62%);
+    /* Light yellow */
+    --textColorAlt3: hsl(198, 20%, 13%);
+    /* Very dark blue */
+    --textColorVariant: hsl(0, 0%, 100%);
+    /* White (text)  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', system-ui;
+}
+
+body.theme-1 {
+    background-color: var(--bgMain);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header span {
+    color: var(--textColorAlt);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Style for numbers indicating theme positions */
+.theme-indicator {
+    font-size: 0.75rem;
+    color: var(--textColorAlt);
+    position: absolute;
+}
+
+.theme-indicator:nth-child(1) {
+    left: 3.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
+}
+
+.theme-indicator:nth-child(2) {
+    left: 4.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
+}
+
+.theme-indicator:nth-child(3) {
+    left: 5.5rem;
+    top: -0.5rem;
+    transform: translateY(-50%);
+}
+
+.theme-toggle {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#theme-slider {
+    width: 3rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: var(--toggleBg);
+    cursor: pointer;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    /* Working on the thumb in the slider */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: var(--keyBgToggle);
+    border-radius: 50%;
+    box-shadow: 0 0.1rem var(--keyShadowToggle);
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: var(--keyBgToggle);
+    /* Change this for Firefox */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-label {
+    font-size: 0.75rem;
+    color: var(--textColorAlt);
+}
+
+.display .output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--screenBg);
+    color: var(--textColorAlt);
+    padding: 0.625rem;
+    border: none;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.output {
+    font-size: 2rem;
+}
+
+.btn-container {
+    background: var(--toggleBg);
+    padding: 2rem;
+    border-radius: 0.625rem;
+}
+
+.buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.625rem;
+}
+
+.btn {
+    background-color: var(--keyBgAlt);
+    color: var(--textColor);
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.25rem var(--keyShadowAlt);
+}
+
+.btn:active {
+    background-color: var(--keyBgAlt);
+    box-shadow: 0 0.25rem var(--keyShadowAlt);
+    transform: translateY(0.25rem);
+}
+
+.equal {
+    background-color: var(--keyBgToggle);
+    color: var(--textColorAlt);
+    grid-column: span 2;
+    box-shadow: 0 0.25rem var(--keyShadowToggle);
+}
+
+.equal:active {
+    background-color: var(--keyBgToggle);
+    box-shadow: 0 0.25rem var(--keyShadowToggle);
+    transform: translateY(0.25rem);
+}
+
+.reset {
+    background-color: var(--keyBg);
+    color: var(--textColorAlt);
+    grid-column: span 2;
+    box-shadow: 0 0.25rem var(--keyShadow);
+}
+
+.reset:active {
+    background-color: var(--keyBg);
+    box-shadow: 0 0.25rem var(--keyShadow);
+    transform: translateY(0.25rem);
+}
+
+.del {
+    background-color: var(--keyBg);
+    color: var(--textColorAlt);
+    box-shadow: 0 0.25rem var(--keyShadow);
+}
+
+.del:active {
+    background-color: var(--keyBg);
+    box-shadow: 0 0.25rem var(--keyShadow);
+    transform: translateY(0.25rem);
+}
+
+
+
+
+/* INITIAL THEME PREFERENCE */
+@media (prefers-color-scheme: theme-2) {
+    body.theme-2 {
+        background-color: var(--mainBg2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header span {
+        color: var(--textColorAlt2);
+    }
+
+    /* Style for numbers indicating theme positions */
+    .theme-indicator {
+        color: var(--textColorAlt2);
+    }
+
+    #theme-slider {
+        background: var(--toggleBg2);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* Working on the thumb in the slider */
+        background-color: var(--keyBgToggle2);
+        box-shadow: 0 0.1rem var(--keyShadowToggle2);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        background-color: var(--keyBgToggle2);
+    }
+
+    .slider-label {
+        color: var(--textColorAlt2);
+    }
+
+    .display .output {
+        background-color: var(--screenBg2);
+        color: var(--textColorAlt2);
+    }
+
+    .btn-container {
+        background: var(--toggleBg2);
+    }
+
+    .btn {
+        background-color: var(--keyBgAlt2);
+        color: var(--textColor2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt2);
+    }
+
+    .btn:active {
+        background-color: var(--keyBgAlt2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt2);
+    }
+
+    .equal {
+        background-color: var(--keyBgToggle2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadowToggle2);
+    }
+
+    .equal:active {
+        background-color: var(--keyBgToggle2);
+        box-shadow: 0 0.25rem var(--keyShadowToggle2);
+    }
+
+    .reset {
+        background-color: var(--keyBg2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .reset:active {
+        background-color: var(--keyBg2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .del {
+        background-color: var(--keyBg2);
+        color: var(--textColorAlt2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+
+    .del:active {
+        background-color: var(--keyBg2);
+        box-shadow: 0 0.25rem var(--keyShadow2);
+    }
+}
+
+
+
+
+@media (prefers-color-scheme: theme-3) {
+    body.theme-3 {
+        background-color: var(--mainBg3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .header span {
+        color: var(--textColorAlt3);
+    }
+
+    /* Style for numbers indicating theme positions */
+    .theme-indicator {
+        color: var(--textColorAlt3);
+    }
+
+    #theme-slider {
+        background: var(--toggleBg3);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        /* Working on the thumb in the slider */
+        background-color: var(--keyBgToggle3);
+        box-shadow: 0 0.1rem var(--keyShadowToggle3);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        background-color: var(--keyBgToggle3);
+    }
+
+    .slider-label {
+        color: var(--textColorAlt3);
+    }
+
+    .display .output {
+        background-color: var(--screenBg3);
+        color: var(--textColorAlt3);
+    }
+
+    .btn-container {
+        background: var(--toggleBg3);
+    }
+
+    .btn {
+        background-color: var(--keyBgAlt3);
+        color: var(--textColor2);
+        box-shadow: 0 0.25rem var(--keyShadowAlt3);
+    }
+
+    .btn:active {
+        background-color: var(--keyBgAlt3);
+        box-shadow: 0 0.25rem var(--keyShadowAlt3);
+    }
+
+    .equal {
+        background-color: var(--keyBgToggle3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadowToggle3);
+    }
+
+    .equal:active {
+        background-color: var(--keyBgToggle3);
+        box-shadow: 0 0.25rem var(--keyShadowToggle3);
+    }
+
+    .reset {
+        background-color: var(--keyBg3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .reset:active {
+        background-color: var(--keyBg3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .del {
+        background-color: var(--keyBg3);
+        color: var(--textColorAlt3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+
+    .del:active {
+        background-color: var(--keyBg3);
+        box-shadow: 0 0.25rem var(--keyShadow3);
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 370px) {}
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 100%);
+}

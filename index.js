@@ -78,7 +78,7 @@ function deleteLast() {
 }
 
 // Function to reset the calculator
-function resetCalculator() {
+function resetClaculator() {
     currentInput = '';
     previousInput = '';
     operator = '';
@@ -86,15 +86,8 @@ function resetCalculator() {
     updateDisplay('');
 }
 
-// Event listener for theme switch 
+// Get the theme slider element
 const themeSlider = document.getElementById('theme-slider');
-
-function adjustElements() {
-    // Change the styling of the screen output
-    const outputEl = document.getElementById('output');
-    outputEl.classList.remove('theme-1', 'theme-2', 'theme-3');
-    outputEl.classList.add('theme-${themeSlider.value}');
-}
 
 // Add event listener for slider movement
 themeSlider.addEventListener('input', () => {
@@ -107,9 +100,6 @@ themeSlider.addEventListener('input', () => {
 
     // Save the selected theme to localStorage so it persists across page reloads
     localStorage.setItem('theme', newTheme);
-
-    // Adjust the small details for the selected theme
-    adjustElements();
 });
 
 // On page load, check if a theme is saved in localStorage
